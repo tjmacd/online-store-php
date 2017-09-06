@@ -1,0 +1,60 @@
+.panel {
+	padding: 0;
+	margin: 0 10px 10px 0;
+}
+
+.product img {
+	height: 400px;
+	max-width: 400px;
+}
+
+.imageFrame {
+	height: 150px;
+	padding: 0;
+	margin: 0;
+}
+
+.panel img {
+	max-height: 150px;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#loginForm {
+  border: solid 1px black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.address {
+  border: solid 1px black;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.address .btn-primary {
+  width: 100%;
+}
+
+.address .btn-default {
+  width: 50%;
+}
+
+.navbar {
+  margin-bottom: 50px;
+  border-radius: 0;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+footer {
+  background-color: gray;
+  padding: 25px;
+}

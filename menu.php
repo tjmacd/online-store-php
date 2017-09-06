@@ -1,6 +1,6 @@
-<?php 
-echo(
-  '<nav class="navbar navbar-inverse">
+<?php session_start();?>
+
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -25,7 +25,13 @@ echo(
           <li>
             <a href="/profile">
               <span class="glyphicon glyphicon-user"></span>
-              <span>Your Account</span>
+              <?php
+                if ($_SESSION["username"] && $_SESSION["username"] !== '') {
+                  echo '<span>' . $_SESSION["username"] . "'s Account</span>";
+                } else {
+                  echo '<span>Your Account</span>';
+                }
+              ?>
             </a>
           </li>
           <li>
@@ -35,9 +41,16 @@ echo(
             </a>
           </li>
           <li>
-            <a href="/login">Log In</a> 
+            <?php 
+              if ($_SESSION["username"] && $_SESSION["username"] !== '') {
+                echo '<a href="/logout.php">Log Out</a> ';
+              } else {
+                echo '<a href="/login.php">Log In</a> ';
+              }
+            ?>
+            
           </li>
         </ul>
       </div>
     </div>
-  </nav>'); ?>
+</nav>
