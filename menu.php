@@ -10,7 +10,7 @@
         </button>
         <a class="navbar-brand" href="/">JunkMart</a>
       </div>
-      <form class="navbar-form col-md-6" role="search" action="/search", method="post">
+      <form class="navbar-form col-md-6" role="search" action="/search.php" method="get">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search" id="query" name="query"/>
           <div class="input-group-btn">
