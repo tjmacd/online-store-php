@@ -7,6 +7,7 @@
 $servername = "localhost";
 $username = "admin";
 $adminPassword = "120v35watt";
+$dbname = "store";
 
 function test_input($data) {
       $data = trim($data);
