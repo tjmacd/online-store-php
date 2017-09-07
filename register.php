@@ -23,7 +23,7 @@
       } elseif ($password != $confirmPassword) {
         $errMessage = "Passwords do not match!";
       } else {
-        $conn = mysqli_connect($servername, $username, $adminPassword, "accounts");
+        $conn = mysqli_connect($servername, $username, $adminPassword, $dbname);
         if(!$conn) {
           die("connection to database failed: " . mysqli_connect_error());
         }

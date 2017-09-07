@@ -20,7 +20,7 @@ if($_SESSION["email"]){
       $email = test_input($_POST["email"]);
       $password = test_input($_POST["password"]);
       
-      $conn = mysqli_connect($servername, $username, $adminPassword, "accounts");
+      $conn = mysqli_connect($servername, $username, $adminPassword, $dbname);
       if(!$conn) {
         die("connection to database failed: " . mysqli_connect_error());
       }
