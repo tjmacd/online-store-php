@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/profile">
+            <a href="/profile.php">
               <span class="glyphicon glyphicon-user"></span>
               <?php
                 if ($_SESSION["username"] && $_SESSION["username"] !== '') {

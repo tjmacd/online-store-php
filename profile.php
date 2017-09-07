@@ -1,7 +1,7 @@
 <?php
 #Check logged in
 session_start();
-$_SESSION["returnTo"] = "/checkoutShipping.php";
+$_SESSION["returnTo"] = "/profile.php";
 if(!$_SESSION["email"]){
   header("Location: /login.php");
   die();
@@ -12,12 +12,11 @@ if(!$_SESSION["email"]){
 <html>
   <head>
     <?php include 'scripts.php'; ?>
-    <title id="title">Checkout</title>
+    <title id="title">Account Profile</title>
   </head>
   <body>
     <?php include 'menu.php'; ?>
-    <h3>Checkout</h3>
-    <h3>Select address to ship to</h3>
+    <h3>Address book</h3>
     <div id='addressBook'>
       <?php
       $conn = mysqli_connect($servername, $username, $adminPassword, $dbname);
@@ -33,9 +32,8 @@ if(!$_SESSION["email"]){
           <div>'.$address["line2"].'</div>
           <div>'.$address["city"].', '.$address["province"].' '.$address["postcode"].'</div>
           <div>'.$address["country"].'</div>
-          <a class="btn btn-primary" type="submit" href="/checkoutPayment.php?shipTo='.$address["address_id"].'">Use this address</a>
-          <a class="btn btn-default" type="submit" href="/editAddress.php?id='.$address["address_id"].'">Edit</a>
-          <a class="btn btn-default" type="submit" href="/deleteAddress.php?id='.$address["address_id"].'">Delete</a>
+          <a class="btn btn-default" href="/editAddress.php?id='.$address["address_id"].'">Edit</a>
+          <a class="btn btn-default" href="/deleteAddress.php?id='.$address["address_id"].'">Delete</a>
         </div>';
       }
       ?>
