@@ -15,6 +15,7 @@
       } else {
         $title = "Product not found!";
       }
+      mysqli_close($conn);
     ?>
     <title id="title"><?php echo $title;?></title>
   </head>
@@ -37,7 +38,7 @@
         echo "Product not found.";
       }
     
-      mysqli_close($conn);
+      
     ?>
     
   </body>

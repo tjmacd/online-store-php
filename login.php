@@ -24,7 +24,7 @@ if($_SESSION["email"]){
       if(!$conn) {
         die("connection to database failed: " . mysqli_connect_error());
       }
-      $sql = "SELECT email, firstname FROM Users WHERE email = '$email' and password = '$password'";
+      $sql = "SELECT email, firstname, user_id FROM Users WHERE email = '$email' and password = '$password'";
       $result = mysqli_query($conn, $sql);
       if(mysqli_num_rows($result) == 1) {
         
@@ -32,6 +32,7 @@ if($_SESSION["email"]){
         $_SESSION["email"] = $email;
         $row = mysqli_fetch_assoc($result);
         $_SESSION["username"] = $row["firstname"];
+        $_SESSION["user_id"] = $row["user_id"];
         $errMessage = "Login success";
         
         if($_SESSION["returnTo"]) {

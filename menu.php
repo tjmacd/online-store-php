@@ -35,7 +35,7 @@
             </a>
           </li>
           <li>
-            <a href="/cart">
+            <a href="/cart.php">
               <span class="glyphicon glyphicon-shopping-cart"></span>
 		      <span>Cart</span>
             </a>

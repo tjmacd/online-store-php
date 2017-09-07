@@ -7,7 +7,7 @@
   <body>
     <?php include 'menu.php'; ?>
     <?php 
-      $conn = mysqli_connect($servername, $username, $adminPassword, "store");
+      $conn = mysqli_connect($servername, $username, $adminPassword, $dbname);
       if(!$conn) {
         die("connection to database failed: " . mysqli_connect_error());
       }
