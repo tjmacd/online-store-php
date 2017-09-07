@@ -38,7 +38,7 @@ if(!$_SESSION["email"]){
           <div class="panel-body">Price: $' . $row["price"] . '</div>
         </div>';
       }
-      echo '<a class="btn btn-primary" href="/checkoutShipping">Check Out</a>';
+      echo '<a class="btn btn-primary" href="/checkoutShipping.php">Check Out</a>';
     } else {
       echo '<div class="panel panel-default">Your shopping cart is empty.</div>';
     }
