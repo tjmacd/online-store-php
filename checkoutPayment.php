@@ -6,7 +6,6 @@ if(!$_SESSION["email"]){
   header("Location: /login.php");
   die();
 }
-$_SESSION["shipTo"] = $_GET["shipTo"];
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +45,8 @@ $_SESSION["shipTo"] = $_GET["shipTo"];
         <select id="year" name="year" required></select>
       </div>
       <div class="clearfix hidden-md-up"></div>
+      
+      <input type="hidden" name="shipTo" id="shipTo" value="<?php echo $_GET['shipTo'];?>"/>
       
       <div class="col-md-offset-1 col-md-1">
         <button type="submit" class="btn btn-primary">Next</button>

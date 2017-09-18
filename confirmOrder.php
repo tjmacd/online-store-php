@@ -22,7 +22,7 @@ if(!$_SESSION["email"]){
       die("connection to database failed: " . mysqli_connect_error());
     }
     # Get Address
-    $sql = "SELECT name, line1, line2, city, province, postcode, country FROM Addresses WHERE address_id = ". $_SESSION["shipTo"];
+    $sql = "SELECT name, line1, line2, city, province, postcode, country FROM Addresses WHERE address_id = ". $_POST["shipTo"];
     $result = mysqli_query($conn, $sql);
     $address = mysqli_fetch_assoc($result);
     
