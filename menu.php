@@ -8,9 +8,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">JunkMart</a>
+        <a class="navbar-brand" href="./">JunkMart</a>
       </div>
-      <form class="navbar-form col-md-6" role="search" action="/search.php" method="get">
+      
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+		  <li>
+	  <form class="navbar-form col-md-6" role="search" action="/search.php" method="get">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search" id="query" name="query"/>
           <div class="input-group-btn">
@@ -20,10 +24,9 @@
           </div>
         </div>
       </form>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
+          </li>
           <li>
-            <a href="/profile.php">
+            <a href="./profile.php">
               <span class="glyphicon glyphicon-user"></span>
               <?php
                 if ($_SESSION["username"] && $_SESSION["username"] !== '') {
@@ -35,7 +38,7 @@
             </a>
           </li>
           <li>
-            <a href="/cart.php">
+            <a href="./cart.php">
               <span class="glyphicon glyphicon-shopping-cart"></span>
 		      <span>Cart</span>
             </a>
@@ -43,9 +46,9 @@
           <li>
             <?php 
               if ($_SESSION["username"] && $_SESSION["username"] !== '') {
-                echo '<a href="/logout.php">Log Out</a> ';
+                echo '<a href="./logout.php">Log Out</a> ';
               } else {
-                echo '<a href="/login.php">Log In</a> ';
+                echo '<a href="./login.php">Log In</a> ';
               }
             ?>
             
