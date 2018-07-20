@@ -2,8 +2,8 @@
 #Check logged in
 session_start();
 if(!$_SESSION["email"]){
-  $_SESSION["returnTo"] = "/cart.php";
-  header("Location: /login.php");
+  $_SESSION["returnTo"] = "./cart.php";
+  header("Location: ./login.php");
   die();
 }
 ?>
@@ -42,7 +42,7 @@ if(!$_SESSION["email"]){
     ?>
     
     <h2>Confirm order</h2>
-    <form method="post" action="/orderSuccess.php">
+    <form method="post" action="./orderSuccess.php">
       <h3>Ship to:</h3>
       <div class="panel panel-default">
         <strong><?php echo $address["name"];?></strong>

@@ -1,9 +1,9 @@
 <?php
 #Check logged in
 session_start();
-$_SESSION["returnTo"] = "/checkoutShipping.php";
+$_SESSION["returnTo"] = "./checkoutShipping.php";
 if(!$_SESSION["email"]){
-  header("Location: /login.php");
+  header("Location: ./login.php");
   die();
 }
 ?>
@@ -33,15 +33,15 @@ if(!$_SESSION["email"]){
           <div>'.$address["line2"].'</div>
           <div>'.$address["city"].', '.$address["province"].' '.$address["postcode"].'</div>
           <div>'.$address["country"].'</div>
-          <a class="btn btn-primary" type="submit" href="/checkoutPayment.php?shipTo='.$address["address_id"].'">Use this address</a>
-          <a class="btn btn-default" type="submit" href="/editAddress.php?id='.$address["address_id"].'">Edit</a>
-          <a class="btn btn-default" type="submit" href="/deleteAddress.php?id='.$address["address_id"].'">Delete</a>
+          <a class="btn btn-primary" type="submit" href="./checkoutPayment.php?shipTo='.$address["address_id"].'">Use this address</a>
+          <a class="btn btn-default" type="submit" href="./editAddress.php?id='.$address["address_id"].'">Edit</a>
+          <a class="btn btn-default" type="submit" href="./deleteAddress.php?id='.$address["address_id"].'">Delete</a>
         </div>';
       }
       ?>
     </div>
     <div class="clearfix hidden-sm-up"></div>
-    <a class="btn btn-primary" href="/newAddress.php">Add new address</a>
+    <a class="btn btn-primary" href="./newAddress.php">Add new address</a>
     
   </body>
 </html>

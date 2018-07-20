@@ -34,7 +34,7 @@
         } else {
           $sql = "INSERT INTO Users (firstname, lastname, email, password) VALUES ('$firstname', '$lastname', '$email', '$password')";
           if(mysqli_query($conn, $sql) === TRUE) {
-            header('Location: /registerSuccess.php');
+            header('Location: registerSuccess.php');
             die();
           } else {
             die('Error: ' . $sql . "<br>" . mysqli_error($conn));

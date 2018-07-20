@@ -7,7 +7,7 @@
   <body>
     <?php include 'menu.php'; ?>
     <h1>Successfully registered</h1>
-    <a href="/login.php">Click here to log in.</a>
+    <a href="login.php">Click here to log in.</a>
     
   </body>
 </html>

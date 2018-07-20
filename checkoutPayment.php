@@ -2,8 +2,8 @@
 #Check logged in
 session_start();
 if(!$_SESSION["email"]){
-  $_SESSION["returnTo"] = "/cart.php";
-  header("Location: /login.php");
+  $_SESSION["returnTo"] = "./cart.php";
+  header("Location: ./login.php");
   die();
 }
 ?>
@@ -17,7 +17,7 @@ if(!$_SESSION["email"]){
   <body>
     <?php include 'menu.php'; ?>
     <h3>Payment</h3>
-    <form class="form-vertical" id="creditCardInfo" method="post" action="/confirmOrder.php">
+    <form class="form-vertical" id="creditCardInfo" method="post" action="./confirmOrder.php">
       <label class="control-label col-md-1" for="name">Name on card:</label>
       <div class="col-md-4 form-group">
         <input type="text" id="name" name="name" class="form-control"
@@ -52,7 +52,7 @@ if(!$_SESSION["email"]){
         <button type="submit" class="btn btn-primary">Next</button>
       </div>
       
-      <script src="scripts/checkout.js"></script>
+      <script src="./scripts/checkout.js"></script>
     </form>
     
   </body>

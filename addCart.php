@@ -3,8 +3,8 @@
 #Check logged in
 session_start();
 if(!$_SESSION["email"]){
-  $_SESSION["returnTo"] = "/addCart.php?id=". test_input($_GET["id"]);
-  header("Location: /login.php");
+  $_SESSION["returnTo"] = "./addCart.php?id=". test_input($_GET["id"]);
+  header("Location: ./login.php");
   die();
 }
 
@@ -29,7 +29,7 @@ $userID = $row["user_id"];
 $sql = "INSERT INTO Cart (user_id, product_id) VALUES ('$userID', '$productID')";
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
-  header("Location: /cart.php");
+  header("Location: ./cart.php");
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

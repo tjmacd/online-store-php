@@ -2,8 +2,8 @@
 #Check logged in
 session_start();
 if(!$_SESSION["email"]){
-  $_SESSION["returnTo"] = "/cart.php";
-  header("Location: /login.php");
+  $_SESSION["returnTo"] = "./cart.php";
+  header("Location: ./login.php");
   die();
 }
 ?>
@@ -33,12 +33,12 @@ if(!$_SESSION["email"]){
         echo '<div class="panel panel-info">
           <div class="panel-heading">'. $row["name"] . '</div>
           <div class="panel-body imageFrame">
-            <img src="/image/' . $row["image"] . '"/>
+            <img src="./image/' . $row["image"] . '"/>
           </div>
           <div class="panel-body">Price: $' . $row["price"] . '</div>
         </div>';
       }
-      echo '<a class="btn btn-primary" href="/checkoutShipping.php">Check Out</a>';
+      echo '<a class="btn btn-primary" href="./checkoutShipping.php">Check Out</a>';
     } else {
       echo '<div class="panel panel-default">Your shopping cart is empty.</div>';
     }

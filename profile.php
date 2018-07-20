@@ -1,9 +1,9 @@
 <?php
 #Check logged in
 session_start();
-$_SESSION["returnTo"] = "/profile.php";
+$_SESSION["returnTo"] = "./profile.php";
 if(!$_SESSION["email"]){
-  header("Location: /login.php");
+  header("Location: ./login.php");
   die();
 }
 ?>
@@ -32,14 +32,14 @@ if(!$_SESSION["email"]){
           <div>'.$address["line2"].'</div>
           <div>'.$address["city"].', '.$address["province"].' '.$address["postcode"].'</div>
           <div>'.$address["country"].'</div>
-          <a class="btn btn-default" href="/editAddress.php?id='.$address["address_id"].'">Edit</a>
-          <a class="btn btn-default" href="/deleteAddress.php?id='.$address["address_id"].'">Delete</a>
+          <a class="btn btn-default" href="./editAddress.php?id='.$address["address_id"].'">Edit</a>
+          <a class="btn btn-default" href="./deleteAddress.php?id='.$address["address_id"].'">Delete</a>
         </div>';
       }
       ?>
     </div>
     <div class="clearfix hidden-sm-up"></div>
-    <a class="btn btn-primary" href="/newAddress.php">Add new address</a>
+    <a class="btn btn-primary" href="./newAddress.php">Add new address</a>
     
   </body>
 </html>

@@ -2,8 +2,8 @@
 #Check logged in
 session_start();
 if(!$_SESSION["email"]){
-  $_SESSION["returnTo"] = "/newAddress.php";
-  header("Location: /login.php");
+  $_SESSION["returnTo"] = "./newAddress.php";
+  header("Location: ./login.php");
   die();
 }
 ?>

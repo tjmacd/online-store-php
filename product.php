@@ -27,12 +27,12 @@
         echo ('<div class="product panel panel-default col-md-3">
           <div class="panel-heading">' . $row["name"] . '</div>
           <div class="panel-body">
-            <img src="/image/' . $row["image"] . '"/>
+            <img src="./image/' . $row["image"] . '"/>
           </div>
           <div class="panel-body">Price: $' . $row["price"] . '</div>
           <div class="panel-body">Description: '. $row["description"] . '</div>
         </div>
-        <a class="btn btn-default" href="/addCart.php?id=' . $row["product_id"].'">Add to cart</a>');   
+        <a class="btn btn-default" href="./addCart.php?id=' . $row["product_id"].'">Add to cart</a>');   
         
       } else {
         echo "Product not found.";

@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if($_SESSION["email"]){
-  header("Location: /main.php");
+  header("Location: ./main.php");
   die();
 }
 ?>
@@ -38,7 +38,7 @@ if($_SESSION["email"]){
         if($_SESSION["returnTo"]) {
           header('Location: ' . $_SESSION["returnTo"]);
         } else {
-          header('Location: /main.php');
+          header('Location: ./main.php');
         }
         die();
         
@@ -83,7 +83,7 @@ if($_SESSION["email"]){
       <div class="clearfix hidden-md-up"></div>
 
       <div class="container">Don't have an account? 
-        <a href="/register.php">Register now.</a> 
+        <a href="./register.php">Register now.</a> 
       </div> 
 			
     </form>

@@ -2,8 +2,8 @@
 #Check logged in
 session_start();
 if(!$_SESSION["email"]){
-  $_SESSION["returnTo"] = "/cart.php";
-  header("Location: /login.php");
+  $_SESSION["returnTo"] = "./cart.php";
+  header("Location: ./login.php");
   die();
 }
 ?>
@@ -29,7 +29,7 @@ if(!$_SESSION["email"]){
     ?>
     
     <h1>Order Complete</h1>
-    <a href="/">Click here to return to main page.</a>
+    <a href="./">Click here to return to main page.</a>
     
   </body>
 </html>
